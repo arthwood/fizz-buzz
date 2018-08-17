@@ -37,7 +37,7 @@ RSpec.describe FizzBuzz do
     context 'with simple config' do
       let(:config) { { '2' => 'fizz' } }
 
-      it "display 'fizz' for even numbers" do
+      it "displays 'fizz' for even numbers" do
         expect(run).to eq [1, 'fizz', 3, 'fizz', 5, 'fizz', 7, 'fizz', 9, 'fizz', 11, 'fizz', 13, 'fizz', 15]
       end
     end
@@ -45,7 +45,7 @@ RSpec.describe FizzBuzz do
     context 'with extended config' do
       let(:config) { { '3' => 'fizz', '5' => 'buzz' } }
 
-      it "display 'fizz' for numbers divisible by 3 and 'buzz' for numbers divisible by '5'" do
+      it "displays 'fizz' for numbers divisible by 3 and 'buzz' for numbers divisible by '5'" do
         expect(run).to eq [1, 2, 'fizz', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz', 11, 'fizz', 13, 14, 'fizzbuzz']
       end
     end
@@ -65,7 +65,7 @@ RSpec.describe FizzBuzz do
     context 'with simple config' do
       let(:config) { { '3' => 'fizz' } }
 
-      it "display 'fizz' for divisible by 3 or containing 3" do
+      it "displays 'fizz' for divisible by 3 or containing 3" do
         expect(run).to eq [1, 2, 'fizz', 4, 5, 'fizz', 7, 8, 'fizz', 10, 11, 'fizz', 'fizz', 14, 'fizz']
       end
     end
@@ -74,7 +74,7 @@ RSpec.describe FizzBuzz do
       let(:config) { { '3' => 'fizz', '5' => 'buzz' } }
       let(:amount) { 51 }
 
-      it "display 'fizz' for numbers divisible by 3 or containing 3 and 'buzz' for numbers divisible by 5 or containing 5" do # rubocop:disable Metrics/LineLength
+      it "displays 'fizz' for numbers divisible by 3 or containing 3 and 'buzz' for numbers divisible by 5 or containing 5" do # rubocop:disable Metrics/LineLength
         result = run
         expect(result.first(15)).to eq(
           [1, 2, 'fizz', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz', 11, 'fizz', 'fizz', 14, 'fizzbuzz']
